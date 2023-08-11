@@ -1,7 +1,7 @@
 #!/bin/bash
 urle () { [[ "${1}" ]] || return 1; local LANG=C i x; for (( i = 0; i < ${#1}; i++ )); do x="${1:i:1}"; [[ "${x}" == [a-zA-Z0-9.~-] ]] && echo -n "${x}" || printf '%%%02X' "'${x}"; done; echo; }
 
-echo -e "\Unzipping FLAME..."
+echo -e "\nUnzipping FLAME..."
 mkdir -p data/FLAME2020/
 unzip FLAME2020.zip -d data/FLAME2020/
 rm -rf FLAME2020.zip
