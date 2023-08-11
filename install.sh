@@ -8,9 +8,9 @@ read -p "Password (FLAME):" password
 username=$(urle $username)
 password=$(urle $password)
 
-echo -e "\nDownloading FLAME..."
+echo -e "\Unzipping FLAME..."
 mkdir -p data/FLAME2020/
-wget --post-data "username=$username&password=$password" 'https://download.is.tue.mpg.de/download.php?domain=flame&sfile=FLAME2020.zip&resume=1' -O './FLAME2020.zip' --no-check-certificate --continue
+# wget --post-data "username=$username&password=$password" 'https://download.is.tue.mpg.de/download.php?domain=flame&sfile=FLAME2020.zip&resume=1' -O './FLAME2020.zip' --no-check-certificate --continue
 unzip FLAME2020.zip -d data/FLAME2020/
 rm -rf FLAME2020.zip
 
